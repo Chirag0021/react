@@ -6,18 +6,24 @@ import First1 from './Component/first';
 import ParentComponent from "./Component/second";
 import Nothing from "./Component/404page";
 import Shoping from "./Component/Third";
+import Useeffectfirst from "./Component/useeffect";
+import Big from "./Component/seconduseeffect";
 export default function App()
 {
   return(
     <BrowserRouter>
-    <Link to="/First1"> First</Link>
-    <Link to="/Second"> Second</Link>
-    <Link to="/Third"> Third</Link>
-    <Link to="/notfound"> 404</Link>
+    <Link to="/First1"> First</Link><br/>
+    <Link to="/Second"> Second</Link><br/>
+    <Link to="/Third"> Third</Link><br/>
+    <Link to="/Fourth"> Useeffect</Link><br/>
+    <Link to="/Fifth"> UseeffectSecond</Link><br/>
+    <Link to="/notfound"> 404</Link><br/>
       <Routes>
         <Route path="First1" element={<First1 / >}/>  
         <Route path="Second" element={<ParentComponent / >}/> 
         <Route path="Third" element={<Shoping / >}/> 
+        <Route path="Fourth" element={<Useeffectfirst / >}/>
+        <Route path="Fifth" element={<Big / >}/>
         <Route path="/*" element={<Nothing />}/>
         
         </Routes>
