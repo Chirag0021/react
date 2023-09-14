@@ -5,16 +5,19 @@ import { BrowserRouter, Routes, Route , Link ,Navigate} from "react-router-dom";
 import First1 from './Component/first';
 import ParentComponent from "./Component/second";
 import Nothing from "./Component/404page";
+import Shoping from "./Component/Third";
 export default function App()
 {
   return(
     <BrowserRouter>
     <Link to="/First1"> First</Link>
     <Link to="/Second"> Second</Link>
+    <Link to="/Third"> Third</Link>
     <Link to="/notfound"> 404</Link>
       <Routes>
         <Route path="First1" element={<First1 / >}/>  
         <Route path="Second" element={<ParentComponent / >}/> 
+        <Route path="Third" element={<Shoping / >}/> 
         <Route path="/*" element={<Nothing />}/>
         
         </Routes>
